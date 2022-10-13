@@ -27,13 +27,12 @@
         <section class="login">
           <h2 class="form__title">Login</h2>
           <form
-            onsubmit="loginController.login(event)"
+            onsubmit="userController.login(event)"
             action=""
             class="form-login"
           >
-            <div class="form__control form__user">
+            <div class="form__control form__user form__position">
               <input
-                oninput="loginController.isPutedUsernaValue(event)"
                 class="form__control--user form__control--item"
                 type="text"
                 name="usuario"
@@ -41,9 +40,8 @@
                 placeholder="Usuário"
               />
             </div>
-            <div class="form__control form__password">
+            <div class="form__control form__password form__position">
               <input
-                oninput="loginController.isPutedPasswordValue(event)"
                 class="form__control--password form__control--item"
                 type="password"
                 name="senha"
@@ -66,9 +64,9 @@
       </div>
     </main>
     <script src="./model/User.js"></script>
-    <script src="./controller/LoginController.js"></script>
+    <script src="./controller/LoginPreenchidoController.js"></script>
     <script>
-      let loginController = new LoginController();
+      let loginPreenchido = new LoginPreenchidoController();
     </script>
   </body>
 </html>

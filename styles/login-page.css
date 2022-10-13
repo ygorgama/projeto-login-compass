@@ -53,6 +53,14 @@ body {
   top: 10px;
 }
 
+.form__position::after {
+  left: 49%;
+}
+
+.form {
+  text-align: center;
+}
+
 .form__user {
   position: relative;
 }
@@ -67,8 +75,17 @@ body {
   content: url(../assets/icon-password.svg);
 }
 
+.form__error {
+  color: #E9B425;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  width: 50%;
+  text-align: center;
+  margin: 2em 0 3em 0;
+}
+
 .btn__form {
-  margin-top: 4em;
   width: 55%;
   height: 3.5rem;
   background: linear-gradient(#FF2D04, #C13216);
@@ -78,6 +95,10 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 22.82px;
+}
+
+.margin-top {
+  margin-top: 4em;
 }
 
 .image {
