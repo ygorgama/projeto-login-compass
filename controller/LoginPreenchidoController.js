@@ -1,12 +1,45 @@
 class LoginPreenchidoController {
   constructor() {
-    const localStorageItem = JSON.parse(localStorage.getItem("userInput"));
     let $ = document.querySelector.bind(document);
-    $("#username").value = localStorageItem.username;
-    $("#password").value = localStorageItem.password;
+    const localStorageItem = JSON.parse(localStorage.getItem("userInput"));
+
+    if (localStorageItem !== null) {
+      $("#username").value = localStorageItem.username;
+      $("#password").value = localStorageItem.password;
+    }
   }
 
   login(event) {
     event.preventDefault();
+    let $ = document.querySelector.bind(document);
+
+    const username = $("#username").value;
+    const password = $("#password").value;
+
+    console.log(username);
+    console.log(password);
+
+    if (username === "" || password === "") {
+      location.href = "login-erro.html";
+      localStorage.clear();
+      return;
+    } else if (username === undefined || username === null) {
+      location.href = "login-erro.html";
+      localStorage.clear();
+      return;
+    } else if (password === undefined || password === null) {
+      location.href = "login-erro.html";
+      localStorage.clear();
+      return;
+    } else if (password !== "admin" || username !== "admin") {
+      location.href = "login-erro.html";
+      localStorage.clear();
+      return;
+    }
+
+    let user = new User(username, password);
+    console.log(user);
+    user.saveUser();
+    location.href = "pagina-principal.html";
   }
 }
