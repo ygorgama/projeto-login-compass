@@ -28,14 +28,15 @@
           </p>
         </div>
         <div class="header__localization">
-          <p class="header__localization--city">Passo Fundo - RS</p>
+          <p class="header__localization--city" id="cidade">Passo Fundo - RS</p>
           <div class="header__localization--container">
             <img
+              id="icon"
               class="header__localization--icon"
               src="assets/006-cloudy-1 1.svg"
               alt="Icone tempo"
             />
-            <p class="header__localization--graus">22º</p>
+            <p class="header__localization--graus" id="graus">22º</p>
           </div>
         </div>
       </div>
@@ -65,14 +66,37 @@
       <div class="footer__refresh">
         <p class="footer__refresh--about">Application refresh in</p>
         <div class="footer__refresh--container">
-          <p class="footer__refresh--time">600</p>
+          <p class="footer__refresh--time" id="seconds">600</p>
           <p class="footer__refresh--seconds">seconds</p>
         </div>
       </div>
       <div class="footer__options">
-        <button class="footer__otpions--continue">Continuar Navegando</button>
-        <button class="footer__options--leave">Logout</button>
+        <div class="options__container">
+          <a href="www.uol.com" class="footer__otpions--continue"
+            >Continuar Navegando</a
+          >
+        </div>
+        <button
+          onclick="PaginaPrincipalController.logout()"
+          class="footer__options--leave"
+          id="logout"
+        >
+          Logout
+        </button>
       </div>
     </footer>
+    <script src="controller/DateController.js"></script>
+    <script src="view/dateView.js"></script>
+    <script src="./controller/PaginaPrincipalController.js"></script>
+    <script src="controller/LollizationController.js"></script>
+    <script src="controller/WeatherApiController.js"></script>
+    <script>
+      let dateView = new DateView();
+      dateView.hourView();
+      dateView.dayView();
+      dateView.cronometro();
+      let weatherApi = new WeatherApiController();
+      weatherApi.apiCall();
+    </script>
   </body>
 </html>

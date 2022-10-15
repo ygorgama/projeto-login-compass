@@ -40,9 +40,7 @@ class LoginController {
 
       localStorage.setItem("userInput", JSON.stringify(objeto));
 
-      setTimeout(() => {
-        location.href = "login-preenchido.html";
-      }, 300);
+      location.href = "login-preenchido.html";
     }
   }
 }

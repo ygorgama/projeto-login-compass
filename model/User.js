@@ -18,7 +18,6 @@ class User {
     const useObject = {
       username,
       password,
-      isLoged: true,
     };
 
     localStorage.setItem("userLoged", JSON.stringify(useObject));

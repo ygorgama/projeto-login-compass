@@ -37,9 +37,10 @@ class LoginPreenchidoController {
       return;
     }
 
-    let user = new User(username, password);
-    console.log(user);
+    const user = new User(username, password);
     user.saveUser();
+
+    localStorage.removeItem("userInput");
     location.href = "pagina-principal.html";
   }
 }

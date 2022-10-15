@@ -74,7 +74,6 @@
   height: 100px;
   align-items: center;
   justify-content: end;
-  position: relative;
   width: 100%;
 }
 .footer .footer__refresh {
@@ -102,6 +101,7 @@
   width: 30%;
   font-size: 12px;
   direction: rtl;
+  position: relative;
 }
 .footer__information::after {
   content: "";
@@ -109,23 +109,27 @@
   border: 1px solid #fff;
   transform: rotate(90deg);
   position: absolute;
-  left: 67%;
+  right: -8%;
 }
 
 .footer__options {
   display: flex;
   height: 100%;
+  align-items: center;
 }
-.footer__options button {
-  display: block;
-  border: none;
+.footer__options .options__container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
 }
 .footer__options .footer__otpions--continue {
+  text-decoration: none;
   text-align: center;
-  background-color: #fff;
   color: #C13216;
   font-size: 12px;
   line-height: 15.21px;
+  display: block;
 }
 .footer__options .footer__options--leave {
   font-size: 12px;
@@ -133,5 +137,7 @@
   font-weight: bold;
   color: #fff;
   width: 120px;
+  border: none;
+  display: block;
   background: none;
 }/*# sourceMappingURL=pagina-principal.css.map */
