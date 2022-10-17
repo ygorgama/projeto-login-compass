@@ -25,7 +25,8 @@ class WeatherApiController {
 
         this._graus.innerHTML = apiObj.current.temp_c + "º";
         this._icon.setAttribute("src", apiObj.current.condition.icon);
-        this._cidade.innerHTML = apiObj.location.name;
+        this._cidade.innerHTML =
+          apiObj.location.name + " - " + apiObj.location.region;
       },
       (err) => console.log(err),
       { enableHighAccuracy: true }
