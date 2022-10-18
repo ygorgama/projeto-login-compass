@@ -6,7 +6,7 @@ class PaginaPrincipalController {
       username = localStorageItem.username;
     }
 
-    let logout = confirm(`Você quer mesmo sair? ${username}`);
+    let logout = confirm(`Você quer mesmo sair  ${username}?`);
 
     if (logout === true) {
       localStorage.clear();
