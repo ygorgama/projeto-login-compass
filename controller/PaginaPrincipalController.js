@@ -6,10 +6,10 @@ class PaginaPrincipalController {
       username = localStorageItem.username;
     }
 
-    let logout = confirm(`${username} Você quer mesmo sair?`);
+    let logout = confirm(`Você quer mesmo sair? ${username}`);
 
     if (logout === true) {
-      localStorage.removeItem("userLoged");
+      localStorage.clear();
       location.href = "index.html";
     } else {
       location.reload();
